@@ -1,0 +1,86 @@
+body {
+    background-color: #F2F2F2
+}
+
+#navbar {
+    overflow-x: auto;
+}
+
+@media (min-width: 992px) {
+    #navbarAddBtn {
+        transform: translate(0, 100%)
+    }
+}
+
+.dropdown-item i {
+    min-width: 2rem;
+    text-align: center;
+}
+
+.ddItem:focus {
+    background-color: rgba(108, 117, 125, 0.4);
+}
+
+.navbar-nav .nav-link.active,
+#ddHelp.show {
+    color: yellow;
+}
+
+#ddAddBtn,
+#ddDemoBtn {
+    background-color: yellow;
+    color: black;
+}
+
+#ddAddBtn:active,
+#ddDemoBtn:active {
+    background-color: rgb(187, 187, 4);
+}
+
+.nav-tabs .nav-link {
+    transition: 3s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+btn_1 {
+    border: 2px solid gray;
+    color: rgb(44, 45, 49);
+}
+
+.table {
+    padding: 10rem;
+}
+
+.link a {
+    text-decoration: none;
+    color: rgb(5, 60, 111);
+}
+
+.dropdown-menu a:hover {
+    background-color: rgb(182, 215, 247);
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.link a:hover {
+    text-decoration: none;
+    color: rgb(147, 175, 201);
+}
+
+.link a:visited {
+    color: black;
+}
+
+.link1_1 {
+    border-bottom: 7px rgb(1, 1, 112) solid;
+}
+
+.link {
+    border-bottom: 1px solid gray;
+}
