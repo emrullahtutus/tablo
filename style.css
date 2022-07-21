@@ -73,10 +73,6 @@ btn_1 {
     color: rgb(147, 175, 201);
 }
 
-.link a:visited {
-    color: black;
-}
-
 .link1_1 {
     border-bottom: 7px rgb(1, 1, 112) solid;
 }
