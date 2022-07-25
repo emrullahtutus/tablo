@@ -1,5 +1,5 @@
 body {
-    background-color: #F2F2F2
+    background-color: #F2F2F2;
 }
 
 #navbar {
@@ -68,19 +68,24 @@ btn_1 {
     color: black;
 }
 
-.link a:hover {
-    text-decoration: none;
-    color: rgb(147, 175, 201);
-}
-
 .link1_1 {
-    border-bottom: 7px rgb(1, 1, 112) solid;
+    border-bottom: 1px gray solid;
 }
 
 .link {
     border-bottom: 1px solid gray;
 }
 
-.fa-solid fa-calendar-day {
-    font-size: small;
+.buton a {
+    color: black;
+    opacity: 0.5;
+}
+
+td input {
+    outline: none;
+}
+
+.tables th {
+    font-size: 14px;
+    background-color: #F2F2F2;
 }

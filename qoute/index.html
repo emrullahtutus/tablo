@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Qoute.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="z-index: 99;">
+            <div class="container-fluid justify-content-start"><a href="/" class="router-link-active router-link-exact-active navbar-brand font-monospace p-2 px-4" aria-current="page">Katana</a><button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-shop"></i> SELL </a><a href="/manufacturingorders" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-basket-shopping"></i> BUY </a><a href="/inventory" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-cube"></i> STOCK </a><a href="/products" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-star"></i> ITEMS </a><a href="/contacts" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-user-group"></i> CONTACTS </a><a href="/settings" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-gear"></i> SETTINGS </a></div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Sales order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Purchase order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> New product card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                                    class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                                    What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-code"></i> Developer portal</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-user-group"></i> Partner directory</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0 p-2 text-decoration-none"><a id="ddDemoBtn" class="btn_1 border-0 shadow-none text-decoration-none rounded-2 px-4 py-1 " aria-current="page" href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="text-white dropdown flex-shrink-0">
+                        <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                            <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                        Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account" class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                                    Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                        class="fa-solid fa-user-group"></i> Team</a><a href="#" class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                                    Subscription</a>
+                            <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        </div>
+        <div class=" link1_1">
+            <div class="col-4 d-flex p-1 ">
+
+                <button type="submit" class="ms-4 border-0 text-muted">open</button>
+                <button type="submit" class="border-0 text-muted">done</button>
+
+            </div>
+
+        </div>
+        <div class="card  m-3 mt-4">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-10">
+                        <p class="m-0 ms-4">Quote</p>
+                        <h6 class="m-0 ms-4">SO-1</h6>
+                    </div>
+
+                    <div class="col-2 d-flex justify-content-around align-items-center">
+                        <p class="text-danger m-0">Not saved</p>
+
+                        <a href="" class=""><i class="fa-solid fa-ellipsis-vertical "></i>
+                        </a>
+                        <a href=""><i class="fa-solid fa-xmark text-decoration-none"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card-body m-3 p-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div>
+                            <p>customer</p>
+                            <input type="text" placeholder="" class="w-100 border-0 border-bottom mb-5 border-2 border-danger" style="outline: none;">
+                        </div>
+
+                        <div class="col-6">
+                            <p>Sales order #
+                            </p>
+                            <input type="text" placeholder="" class="w-100 border-0 border-bottom mb-5 border-3" style="outline: none;">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Bill to</p>
+                                <input type="text" placeholder=" Enter address... " class="w-100 border-0 border-bottom mb-5 border-3" style="outline: none;">
+                            </div>
+                            <div class="col-6">
+                                <p>Ship to</p>
+                                <input type="text" placeholder="Same as billing address" class="w-100 border-0 border-bottom mb-5 border-3" style="outline: none;">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col" style="outline: none;">
+                                <p> Delivery deadline</p>
+
+                                <input type="text " class="w-100 border-0 border-bottom  border-3 " style="outline: none; " placeholder="2022-08-05">
+                            </div>
+                            <div class="col">
+                                <p>Created date
+                                </p>
+                                <input type="text " class="w-100 border-0 border-bottom  border-3 " style="outline: none; " placeholder="2022-07-22">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p class="m-0 mt-3">Ship from</p>
+                            <div class="dropdown">
+                                <button class="btn border-bottom justify-content-start
+                                d-flex dropdown w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none;">
+                              Main location
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="table table-bordered tables">
+                    <thead class="text-muted">
+                        <th></th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price per unit</th>
+                        <th>Total price</th>
+                        <th>Tax %</th>
+                        <th></th>
+
+                    </thead>
+                    <tbody>
+                        <td style="background-color:#F2F2F2;"></td>
+                        <td class="border-2 border-bottom border-danger"><input type="text" class="border-0  w-100" placeholder="Search or create item"></td>
+                        <td><input type="text" class="border-0" placeholder="1 pcs"></td>
+                        <td><input type="text" class="border-0" placeholder="0 USD"></td>
+                        <td><input type="text" class="border-0" placeholder="0 USD"></td>
+                        <td>
+                            <input type="text" class="border-0" placeholder=20%-VAT[DEMO]></td>
+                        <td><i class=" fa-solid fa-ellipsis-vertical "></i></td>
+                    </tbody>
+
+                </table>
+                <div class="row mb-5 me-4 ">
+                    <div class="col-8 ">
+                        <a href=" " class="text-decoration-none p-4 "><i class="fa-solid fa-plus "></i>Add new row</a>
+                    </div>
+
+                    <div class="col-4 d-flex justify-content-around mb-5 ">
+                        <div>Total items not shipped (with Tax):</div>
+                        <div>644.00 USD</div>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-8 ">
+
+                    </div>
+
+                    <div class="col-4 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                        <div class="fw-bold ">Total units:</div>
+                        <div class="pe-5 ">1 pcs</div>
+
+                    </div>
+                    <div class="col-8 ">
+
+                    </div>
+                    <div class="col-4 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                        <div class="fw-bold ">Subtotal (Tax excluded):</div>
+                        <div class="pe-5 ">540.00 USD</div>
+
+                    </div>
+                    <div class="col-8 ">
+
+                    </div>
+                    <div class="col-4 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                        <div class="fw-bold ">Plus Tax:</div>
+                        <div class="pe-5 ">108.00 USD</div>
+
+                    </div>
+                    <div class="col-8 ">
+
+                    </div>
+                    <div class="col-4 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                        <div class="fw-bold ">Total:</div>
+                        <div class="pe-5 ">648.00 USD</div>
+
+                    </div>
+                </div>
+                <div>
+                    <div class="row mt-4 ">
+                        <div class="col  mt-5 mx-4 " style="background-color: #f4f4f4;">
+                            <p style="font-size: 13px; align-items: center d-flex
+                            h-100;">Additional info</p>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col mx-4 buton " style="border: 1px solid #ccc;">
+                            <a href=" "><i class="fa-solid fa-bold p-2 "></i></a>
+                            <a href=" "><i class="fa-solid fa-italic p-2 "></i></a>
+                            <a href=" "><i class="fa-solid fa-underline p-2 "></i></a>
+                            <a href=" "><i class="fa-solid fa-link p-2 "></i></a>
+                            <a href=" "><i class="fa-solid fa-list-ol p-2 "></i></a>
+                            <a href=" "><i class="fa-solid fa-list p-2 "></i></a>
+                        </div>
+                    </div>
+                    <div class="row mx-0 ">
+                        <form action=" ">
+                            <textarea class="w-100 "></textarea>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script type="module " src="/src/main.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+</body>
+
+
+
+
+
+</html>s

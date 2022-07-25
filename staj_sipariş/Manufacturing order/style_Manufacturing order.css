@@ -81,6 +81,15 @@ btn_1 {
     border-bottom: 1px solid gray;
 }
 
-.fa-solid fa-calendar-day {
-    font-size: small;
+.tables {
+    background-color: #F2F2F2;
+}
+
+.tables th {
+    color: #2C2D31BF;
+    font-size: 14px;
+}
+
+.row p {
+    font-size: 12px
 }
