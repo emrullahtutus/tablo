@@ -70,8 +70,8 @@
         <div class=" link1_1">
             <div class="col-4 d-flex p-1 ">
 
-                <button type="submit" class="ms-4 border-0 text-muted">open</button>
-                <button type="submit" class="border-0 text-muted">done</button>
+                <button type="submit" class="ms-4 border-0 text-muted">Quotes</button>
+                <button type="submit" class="border-0 text-muted">Sales orders</button>
 
             </div>
 
@@ -87,8 +87,14 @@
                     <div class="col-2 d-flex justify-content-around align-items-center">
                         <p class="text-danger m-0">Not saved</p>
 
-                        <a href="" class=""><i class="fa-solid fa-ellipsis-vertical "></i>
-                        </a>
+                        <div class=" mt-2">
+                            <a href="" class=" btn d-flex  dropdown rounded-0 " data-bs-toggle="dropdown" aria-expanded="false "><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                            </button>
+                            <ul class="dropdown-menu p-3">
+                                <!-- Dropdown menu links -->
+                                <li><a class="dropdown-item " href="#">Delete</a></li>
+                                <li><a class="dropdown-item" href="#">Revert all</a></li>
+                        </div>
                         <a href=""><i class="fa-solid fa-xmark text-decoration-none"></i></a>
                     </div>
                 </div>
@@ -100,14 +106,14 @@
                 <div class="row">
                     <div class="col-8">
                         <div>
-                            <p>customer</p>
-                            <input type="text" placeholder="" class="w-100 border-0 border-bottom mb-5 border-2 border-danger" style="outline: none;">
+                            <p>Customer</p>
+                            <input type="text" placeholder="Search or create Customer" class="w-100 border-0 border-bottom mb-5 border-2 border-danger" style="outline: none;">
                         </div>
 
                         <div class="col-6">
                             <p>Sales order #
                             </p>
-                            <input type="text" placeholder="" class="w-100 border-0 border-bottom mb-5 border-3" style="outline: none;">
+                            <input type="text" placeholder="SO-1" class="w-100 border-0 border-bottom mb-5 border-3" style="outline: none;">
                         </div>
 
                         <div class="row">
@@ -147,7 +153,7 @@
                               Main location
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Main location</a></li>
 
                                 </ul>
                             </div>
@@ -174,7 +180,19 @@
                         <td><input type="text" class="border-0" placeholder="0 USD"></td>
                         <td>
                             <input type="text" class="border-0" placeholder=20%-VAT[DEMO]></td>
-                        <td><i class=" fa-solid fa-ellipsis-vertical "></i></td>
+                        <td>
+                            <div class=" mt-2">
+                                <a href="" class=" btn d-flex  dropdown rounded-0 " data-bs-toggle="dropdown" aria-expanded="false "><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                                </button>
+                                <ul class="dropdown-menu p-3">
+                                    <!-- Dropdown menu links -->
+                                    <li>
+                                        <a class="dropdown-item " href="#">
+                                            <i class="fa-solid fa-trash-can"></i> Delete</a>
+                                    </li>
+
+                            </div>
+                        </td>
                     </tbody>
 
                 </table>
