@@ -68,10 +68,21 @@ body {
     color: rgb(147, 175, 201);
 }
 
-body {
-    font-size: small;
+.tables_bg td {
+    background: #F2F2F2;
 }
 
-.tables th {
-    background-color: #F2F2F2;
+.Quotes_border {
+    border: none;
+    border-bottom: 2px solid #003E9B;
+}
+
+.row input[type=text]:focus {
+    border-bottom: 2px solid #003E9B !important;
+}
+
+.form-control:focus {
+    border: 1px solid #003E9B !important;
+    border-radius: 0;
+    box-shadow: none;
 }

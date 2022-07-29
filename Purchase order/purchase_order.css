@@ -68,24 +68,16 @@ btn_1 {
     color: black;
 }
 
-.link a:hover {
-    text-decoration: none;
-    color: rgb(147, 175, 201);
-}
-
-.tables {
-    background-color: #F2F2F2;
-}
-
-.tables th {
-    color: #2C2D31BF;
-    font-size: 14px;
-}
-
-.row p {
-    font-size: 12px
+.fa-solid fa-calendar-day {
+    font-size: small;
 }
 
 .row input[type=text]:focus {
     border-bottom: 2px solid #003E9B !important;
+}
+
+.form-control:focus {
+    border: 1px solid #003E9B !important;
+    border-radius: 0;
+    box-shadow: none;
 }

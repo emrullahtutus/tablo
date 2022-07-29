@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="purchase_order.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="z-index: 99;">
+            <div class="container-fluid justify-content-start"><a href="/" class="router-link-active router-link-exact-active navbar-brand font-monospace p-2 px-4" aria-current="page">Katana</a><button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-shop"></i> SELL </a><a href="/manufacturingorders" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-basket-shopping"></i> BUY </a><a href="/inventory" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-cube"></i> STOCK </a><a href="/products" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-star"></i> ITEMS </a><a href="/contacts" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-user-group"></i> CONTACTS </a><a href="/settings" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-gear"></i> SETTINGS </a></div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Sales order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Purchase order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> New product card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                                    class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                                    What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-code"></i> Developer portal</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-user-group"></i> Partner directory</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0 p-2 text-decoration-none"><a id="ddDemoBtn" class="btn_1 border-0 shadow-none text-decoration-none rounded-2 px-4 py-1 " aria-current="page" href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="text-white dropdown flex-shrink-0">
+                        <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                            <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                        Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account" class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                                    Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                        class="fa-solid fa-user-group"></i> Team</a><a href="#" class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                                    Subscription</a>
+                            <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        </div>
+
+    </div>
+    <div class="card  m-lg-3 mt-lg-4 m-sm-1 mt-sm-2">
+        <div class="card-header " style="background-color: #fff;">
+            <div class="row">
+                <div class="col-10">
+                    <p class="m-0 ms-4">Purchase order</p>
+                    <h6 class="m-0 ms-4">PO-1</h6>
+                </div>
+
+                <div class="col-2 d-flex justify-content-around align-items-center">
+                    <p class="text-danger m-0">Not saved</p>
+
+                    <div class=" mt-2">
+                        <a href="" class=" btn d-flex  dropdown rounded-0 " data-bs-toggle="dropdown" aria-expanded="false "><i class="fa-solid fa-ellipsis-vertical" style="color: rgb(148, 154, 159);"></i></a>
+                        </button>
+                        <ul class="dropdown-menu p-3">
+                            <!-- Dropdown menu links -->
+                            <li><a class="dropdown-item " href="#">Delete</a></li>
+                            <li><a class="dropdown-item" href="#">Revert all</a></li>
+                    </div>
+                    <a href="" style="text-decoration: none;"><i class="fa-solid fa-xmark mt-2" style="color: gray; font-size: 23px;"></i></a>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card-body m-3 p-3">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12">
+                    <div>
+                        <p style="color: #E42C00; font-size: 12px;">Supplier</p>
+                        <input type="text" placeholder="Search or create Customer" class="w-100 border-0 border-bottom mb-5 border-2 border-danger" style="outline: none;">
+                    </div>
+
+                    <div class="col-lg-6 col-sm-12">
+                        <p style="font-size: small; font-weight: 400;  color: rgba(0, 0, 0, 0.54);"> order #
+                        </p>
+                        <input type="text" placeholder="SO-1" class="w-100 border-0 border-bottom mb-5 border-3" style="outline: none;">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-lg-4 col-sm-12">
+                    <div class="row">
+                        <div class="col" style="outline: none;">
+                            <p style="color:rgba(0, 0, 0, 0.38); font-size: 12px;"> Delivery deadline</p>
+                            <input type="date" class="w-100 border-0 border-bottom border-3 " style="outline:none">
+
+
+                        </div>
+                        <div class="col-lg col-sm-12">
+                            <p style="color:rgba(0, 0, 0, 0.38); font-size: 12px;">Created date
+                            </p>
+                            <input type="date" class="w-100 border-0 border-bottom border-3 " style="outline:none">
+
+                        </div>
+                    </div>
+                    <div class="col-lg col-sm-12">
+                        <p class="m-0 mt-3" style="color:rgba(0, 0, 0, 0.38); font-size: 12px;">Ship from</p>
+                        <div class="dropdown">
+                            <button class="btn border-bottom justify-content-start
+                                d-flex dropdown w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none; border: none;">
+                              Main location
+                                </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Main location</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="p-0" style="background-color: #F2F2F2;"></td>
+                        <td class="p-0" style="color: #2c2d31bf; font-size: 14px; background-color: #F2F2F2;" class=""> <span>Item</span> <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0" class="p-0 " style="color: #2c2d31bf;font-size: 14px; background-color:#F2F2F2;"><span>Quantity</span> <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0 " style="color: #2c2d31bf;font-size: 14px; background-color: #F2F2F2;"><span>UoM</span> <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0 " style="color: #2c2d31bf;font-size: 14px; background-color: #F2F2F2;"><span>Price per unit</span> <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0 " style="color: #2c2d31bf;font-size: 14px; background-color: #F2F2F2; "><span>Total price</span> <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0 " style="color: #2c2d31bf;font-size: 14px;  background-color: #F2F2F2;"> <span>Tax %</span> <sup><i class="fa-solid fa-circle-info"></i></sup>
+                        </td>
+                        <td style="background-color: #F2F2F2;"> </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="p-0">
+                            <p>ss</p>
+                        </td>
+                        <td class="p-0" colspan="11"></td>
+                    </tr>
+                    <tr>
+                        <td class="p-0">1.</td>
+                        <td class="p-0" class=""><input type="text" class="form-control" placeholder="Search or create item" style="border: none ; outline: none; border-bottom: 2px solid #E42C00; width: 100% ; border-radius: 0%;"></td>
+                        <td class="p-0"><input type="text" class="form-control" placeholder="
+                            1" style="border: none ; outline: none;"></td>
+                        <td class="p-0"><input type="text" class="form-control" placeholder="pcs" style="border: none ; outline: none;"></td>
+                        <td class="p-0"><input type="text" class="form-control" placeholder="0 USD" style="border: none ; outline: none;"></td>
+                        <td class="p-0"><input type="text" class="form-control" placeholder="0 USD" style="border: none ; outline: none;"></td>
+                        <td class="p-0"><input type="text" class="form-control" placeholder="20%-VAT[DEMO]" style="border: none ; outline: none;"></td>
+                        <td class="p-0"></td>
+                    </tr>
+
+                </table>
+
+
+            </div>
+
+
+
+            <div class="row mb-5 me-4 ">
+                <div class="col-lg-8  col-sm-12 mb-5">
+                    <a href=" " class="text-decoration-none p-4 ms-3" style="font-size: 14px; color: #3365AF;"><i class="fa-solid fa-plus " ></i>Add new row</a>
+                </div>
+
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-around mb-lg-5 mb-sm-0 ">
+                    <div class="mx-5">Total items not shipped (with Tax):</div>
+                    <p class="">644.00 USD</p>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-8 col-sm-12 ">
+
+                </div>
+
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-between mt-2 border-bottom border-1 " style="border-top: 4px solid #00000014" ;>
+                    <strong style="color: #000000DE; font-size: 14px; " class="p-1">Total units</strong>
+                    <p class="pe-5 mb-0 p-1" style="color: #000000DE; font-size: 0.875rem;"> 1pcs</p>
+
+                </div>
+                <div class="col-lg-8 col-smü ">
+
+                </div>
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                    <strong class="p-1 " style="color: #000000DE;font-size: 14px;">Subtotal (Tax excluded) :</strong>
+                    <p class="pe-5 mb-0  p-1" style="color: #000000DE; font-size: 0.875rem;">540.00 USD</p>
+
+                </div>
+                <div class="col-lg-8 col-sm-12 ">
+
+                </div>
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                    <strong class="p-1 " style="color: #000000DE;font-size: 14px;">Plus Tax:</strong>
+                    <p class="pe-5  mb-0 p-1" style="color: #000000DE; font-size: 0.875rem;">108.00 USD</p>
+
+                </div>
+                <div class="col-lg-8 col-sm-12 ">
+
+                </div>
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                    <strong class=" p-1" style="color: #000000DE;font-size: 14px;">Total:</strong>
+                    <p class="pe-5 mb-0  p-1 " style="color: #000000DE; font-size: 0.875rem;">648.00 USD</p>
+
+                </div>
+            </div>
+            <div>
+                <div class="mx-lg-3 ">
+                    <div class="row  mt-5  mx-0 " style="background-color: #f4f4f4;">
+                        <div class="col-lg col-sm-12    my-2">
+                            <p class=" m-0" style=" color: rgba(0, 0, 0, 0.54); font-size: 0.75rem">Additional info <sup><i class="fa-solid fa-circle-info"></i></sup></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <textarea id="editor1" class="ck_editor" style="width: 100%;height:40px" placeholder="Type commet here"></textarea>
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    </div>
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+    <script src="//cdn.ckeditor.com/4.19.1/basic/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace('editor1')
+    </script>
+    <script type="module " src="/src/main.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+</body>
+
+
+
+
+
+</html>s

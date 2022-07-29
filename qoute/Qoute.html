@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Qoute.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="z-index: 99;">
+            <div class="container-fluid justify-content-start"><a href="/" class="router-link-active router-link-exact-active navbar-brand font-monospace p-2 px-4" aria-current="page">Katana</a><button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-shop"></i> SELL </a><a href="/manufacturingorders" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-basket-shopping"></i> BUY </a><a href="/inventory" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-cube"></i> STOCK </a><a href="/products" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-star"></i> ITEMS </a><a href="/contacts" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-user-group"></i> CONTACTS </a><a href="/settings" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-gear"></i> SETTINGS </a></div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Sales order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Purchase order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> New product card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                                    class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                                    What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-code"></i> Developer portal</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-user-group"></i> Partner directory</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0 p-2 text-decoration-none"><a id="ddDemoBtn" class="btn_1 border-0 shadow-none text-decoration-none rounded-2 px-4 py-1 " aria-current="page" href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="text-white dropdown flex-shrink-0">
+                        <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                            <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                        Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account" class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                                    Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                        class="fa-solid fa-user-group"></i> Team</a><a href="#" class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                                    Subscription</a>
+                            <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        </div>
+        <div class=" link1_1">
+            <div class="col-4 d-flex p-1 ">
+
+                <button type="submit" class="ms-4     Quotes_border" style="color: #00327C;">Quotes</button>
+                <button type="submit" class="border-0 " style="color: #00327C;">Sales orders</button>
+
+            </div>
+
+        </div>
+        <div class="card  m-lg-3 mt-lg-4 m-sm-2 mt-sm-2">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-lg-10 col-sm-6 ">
+                        <p class="m-0 ms-lg-4 ms-sm-2">Quote</p>
+                        <h6 class="m-0 ms-lg-4 ms-sm-2">SO-1</h6>
+                    </div>
+
+                    <div class="col-lg-2  col-sm-6 d-flex justify-content-around align-items-center">
+                        <p class="text-danger m-0">Not saved</p>
+
+                        <div class=" mt-2 ms-sm-2">
+                            <a href="" class=" btn d-flex  dropdown rounded-0 " data-bs-toggle="dropdown" aria-expanded="false "><i class="fa-solid fa-ellipsis-vertical" style="color: rgb(148, 154, 159);"></i></a>
+                            </button>
+                            <ul class="dropdown-menu p-3">
+                                <!-- Dropdown menu links -->
+                                <li><a class="dropdown-item " href="#">Delete</a></li>
+                                <li><a class="dropdown-item" href="#">Revert all</a></li>
+                        </div>
+                        <a href="" style="text-decoration: none;"><i class="fa-solid fa-xmark mt-2" style="color: gray; font-size: 23px;"></i></a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card-body m-lg-3 p-lg-3  m-sm-1 p-sm-1 ">
+                <div class="row">
+                    <div class="col-lg-8 col-sm-12">
+                        <div>
+                            <p style="color: #E42C00; font-size: 12px;">Customer</p>
+                            <input type="text" placeholder="Search or create Customer" class="w-100 border-0 border-bottom mb-5 border-2 border-danger" style="outline: none;">
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12 ">
+                            <p style="font-size: small; font-weight: 400;  color: rgba(0, 0, 0, 0.54); " class="">Sales order #
+                            </p>
+                            <input type="text" placeholder="SO-1" class="w-100 border-0 border-bottom mb-5 border-3  focus " style="outline: none; ">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-12">
+                                <p style="color:rgba(0, 0, 0, 0.38); font-size: 12px;">Bill to</p>
+                                <input type="text" placeholder=" Enter address... " class="w-100 border-0 border-bottom mb-5 border-3 focus" style="outline: none;" data-bs-toggle="modal" data-bs-target="#addressModal">
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <p style="color:rgba(0, 0, 0, 0.38); font-size: 12px;">Ship to</p>
+                                <input type="text" placeholder="Same as billing address" class="w-100 border-0 border-bottom mb-5 border-3 focus" style="outline: none;" data-bs-toggle="modal" data-bs-target="#addressModal">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="row">
+                            <div class="col" style="outline: none;">
+                                <p style="color:rgba(0, 0, 0, 0.38); font-size: 12px;"> Delivery deadline</p>
+                                <input type="date" class="w-100 border-0 border-bottom border-3 " style="outline:none; border: none;">
+
+                            </div>
+                            <div class="col-lg col-sm-12">
+                                <p style="color:rgba(0, 0, 0, 0.38); font-size: 12px;">Created date
+                                </p>
+                                <input type="date" class="w-100 border-0 border-bottom border-3 " style="outline:none">
+                            </div>
+                        </div>
+                        <div class="col-lg col-sm-12  ">
+                            <p class="m-0 mt-3 " style="color:rgba(0, 0, 0, 0.38); font-size: 12px;border: none ; outline: none;">Ship from</p>
+                            <div class="dropdown">
+                                <button class="btn border-bottom justify-content-start ; 
+                                    d-flex dropdown w-100 " type="button" data-bs-toggle="dropdown" aria-expanded="false" style="outline: none; border: none;">
+                                 <span > Main location</span>
+                                    </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Main location</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="table-responsive">
+
+
+
+                <table class="table table-bordered  ">
+                    <thead class="">
+                        <tr>
+                            <td style="background-color: #F2F2F2;"></td>
+                            <td style="color: #2c2d31bf; font-size: 14px; background-color: #F2F2F2;" class=""> Item <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td class="p-0 " style="color: #2c2d31bf;font-size: 14px; background-color:#F2F2F2;">Quantity <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td class="p-0 " style="color: #2c2d31bf;font-size: 14px; background-color: #F2F2F2;">Price per unit <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td class="p-0 " style="color: #2c2d31bf;font-size: 14px; background-color: #F2F2F2; ">Total price <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td class="p-0 " style="color: #2c2d31bf;font-size: 14px;  background-color: #F2F2F2;"> Tax % <sup><i class="fa-solid fa-circle-info"></i></sup>
+                            </td>
+                            <td style="background-color: #F2F2F2;"> </td>
+                        </tr>
+                    </thead>
+                    <tbody class="">
+                        <tr class="">
+                            <td class="p-0  " style="background-color:#F2F2F2;"></td>
+                            <td class="border-0 p-0   "><input type="text" class="border-0 form-control qoute  " placeholder="Search or create item" style="border-bottom: 2px solid #e42c00 !important; border-radius: 0 ;"></td>
+                            <td class="p-0  "><input type="text" class="border-0 form-control qoute" placeholder="1 pcs" style="width: 100%;"></td>
+                            <td class="p-0  "><input type="text" class="border-0 form-control qoute" placeholder="0 USD"></td>
+                            <td class="p-0 "> <input type="text" class="border-0  form-control qoute" placeholder="0 USD"></td>
+                            <td class="p-0 ">
+                                <input type="text" class="border-0 form-control qoute " placeholder=20%-VAT[DEMO]></td>
+                            <td class="p-0  ">
+                                <div class=" mt-2">
+                                    <a href="" class=" btn d-flex  dropdown rounded-0 " data-bs-toggle="dropdown" aria-expanded="false "><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                                    </button>
+                                    <ul class="dropdown-menu p-3">
+                                        <!-- Dropdown menu links -->
+                                        <li>
+                                            <a class="dropdown-item " href="#">
+                                                <i class="fa-solid fa-trash-can"></i> Delete</a>
+                                        </li>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+            <div class="row mb-5 me-4 ">
+                <div class="col-lg-8 col-sm-12 mb-sm-0 ">
+                    <a href=" " class="text-decoration-none p-4 " style="font-size: 14px; color: #3365AF;"><i class="fa-solid fa-plus " ></i>Add new row</a>
+                </div>
+
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-around mb-5 ">
+                    <div>Total items not shipped (with Tax):</div>
+                    <p>644.00 USD</p>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-8 col-sm-12 ">
+
+                </div>
+
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-between mt-2 border-bottom border-1 " style="border-top: 4px solid #00000014" ;>
+                    <strong style="color: #000000DE; font-size: 14px; " class="p-1">Total units</strong>
+                    <p class="pe-5 mb-0 p-1" style="color: #000000DE; font-size: 0.875rem;"> 1pcs</p>
+
+                </div>
+                <div class="col-lg-8 col-sm-12 ">
+
+                </div>
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                    <strong class="p-1 " style="color: #000000DE;font-size: 14px;">Subtotal (Tax excluded) :</strong>
+                    <p class="pe-5 mb-0  p-1" style="color: #000000DE; font-size: 0.875rem;">540.00 USD</p>
+
+                </div>
+                <div class="col-lg-8 col-sm-12 ">
+
+                </div>
+                <div class="col-lg-4  col-sm-12 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                    <strong class="p-1 " style="color: #000000DE;font-size: 14px;">Plus Tax:</strong>
+                    <p class="pe-5  mb-0 p-1" style="color: #000000DE; font-size: 0.875rem;">108.00 USD</p>
+
+                </div>
+                <div class="col-lg-8 col-sm-12 ">
+
+                </div>
+                <div class="col-lg-4 col-sm-12 d-flex justify-content-between mt-2 border-bottom border-1 ">
+                    <strong class=" p-1" style="color: #000000DE;font-size: 14px;">Total:</strong>
+                    <p class="pe-5 mb-0  p-1 " style="color: #000000DE; font-size: 0.875rem;">648.00 USD</p>
+
+                </div>
+            </div>
+            <div>
+                <div class="mx-3">
+                    <div class="row  mt-5  mx-0 " style="background-color: #f4f4f4;">
+                        <div class="col-lg col-sm-12    my-2 my-sm-0">
+                            <p class=" m-0" style=" color: rgba(0, 0, 0, 0.54); font-size: 0.75rem">Additional info <sup><i class="fa-solid fa-circle-info"></i></sup></p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <textarea id="editor1" class="ck_editor" style="width: 100%;height:40px" placeholder="Type commet here"></textarea>
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    </div>
+
+
+
+
+    <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title " style="font-size: 20px;" id="exampleModalLabel">Billing Address</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12"> <label for="">First name</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important;"></div>
+
+                        <div class="col-lg-6 col-sm-12"> <label for="">Address line 1</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important;" placeholder="Enter street name"></div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12"> <label for="">Last name</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important;outline: none;"></div>
+
+                        <div class="col-lg-6 col-sm-12"> <label for="">Address line 2</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important;
+                                outline: none;" placeholder="Address line 2(e.g.,apartment,suite,unit,or building"></div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12"> <label for="">Company</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important;outline: none;"></div>
+
+                        <div class="col-lg-6 col-sm-12"> <label for="">City Town</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important; outline: none;" placeholder="City,district,suburb,town,orvillage."></div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12"> <label for="">Phone nr</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important; outline: none;"></div>
+
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="row">
+                                <div class="col-6"> <label for="">State/Region</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important; outline: none;" placeholder="State.county,province,or"></div>
+                                <div class="col-6"> <label for="">Zip/Postal</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important; outline: none;" placeholder="ZIP or postal code"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12"> </div>
+
+                        <div class="col-lg-6 col-sm-12"> <label for="">Country</label><input type="text" class="w-100 border-0 " style="border-bottom: 3px solid #f2f2f2 !important; outline: none;"></div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Canel</button>
+                    <button disabled type="button" style="background-color: rgba(224, 224, 224, 1); color: rgba(166, 166, 166, 1); border: none;" class="btn btn-primary">Ok</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="//cdn.ckeditor.com/4.19.1/basic/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace('editor1')
+    </script>
+    <script type="module " src="/src/main.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+</body>
+
+
+
+
+
+</html>s

@@ -70,10 +70,14 @@
     </div>
 
 
-    <div class="col-4 d-flex p-1  border-2 border-bottom w-100">
+    <div class="col-lg-4 d-flex p-1  border-2 border-bottom w-100">
 
-        <button type="submit" class="ms-4 border-0 text-muted" style="color: blue;">Schedule</button>
-        <button type="submit" class="border-0 text-muted" style="color: blue;">Tasks </button>
+        <button type="submit" class="ms-4 " style="  border: none; border-bottom: 2px solid #003E9B; color: #00327C;
+    
+        text-decoration: none;
+        color: #003E9B;
+        font-weight: 600; font-size: 14px;">Schedule</button>
+        <button type="submit" class="border-0 " style=" color: #00327C; font-weight: 600; font-size: 14px; ">Tasks </button>
 
     </div>
 
@@ -82,14 +86,14 @@
         <div class="card-header border-4 border-bottom">
             <div class="row">
                 <div class="col-10">
-                    <p class="m-0 ms-4">Manufacturing order</p>
-                    <h6 class="m-0 ms-4">MO-2</h6>
+                    <p class="m-0 ms-2">Manufacturing order</p>
+                    <h6 class="m-0 ms-2" style="color: rgba(0, 0, 0, 0.87);">MO-2</h6>
                 </div>
 
                 <div class="col-2 d-flex justify-content-around align-items-center">
-                    <p class="text-danger m-0">Not saved</p>
+                    <p class=" m-0" style="font-size: 14px; color: rgb(228, 44, 0); font-weight: 700;">Not saved</p>
 
-                    <a href=""><i class="fa-solid fa-xmark text-decoration-none"></i></a>
+                    <a href=""><i class="fa-solid fa-xmark" style="font-size: 25px; color: gray;" ></i></a>
                 </div>
             </div>
         </div>
@@ -97,53 +101,54 @@
         <div class="card-boddy mt-3 p-3">
             <div class="row   ">
 
-                <div class="col-6">
-                    <p>Manufacturing order #
+                <div class="col-lg-6 col-sm-12">
+                    <p style="color: rgba(0, 0, 0, 0.54);">Manufacturing order #
                     </p>
                     <input type="text" class=" border-0 border-bottom  w-100 border-3" placeholder="MO-2" style="outline: none;">
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-sm-12">
                     <div class="row">
-                        <div class="col-6">
-                            <p>Production deadline</p>
+                        <div class="col-lg-6 col-sm-12">
+                            <p style="color: rgba(0, 0, 0, 0.54);">Production deadline</p>
                             <input type="text" class="
                     border-0 border-bottom  w-100  border-3" style="outline: none;">
                         </div>
 
-                        <div class="col-6">
-                            <p>Created date</p>
-                            <input type="text" class="border-0 border-bottom  w-100 border-3" placeholder="2022-07-25" style="outline: none;">
+                        <div class="col-lg-6 col-sm-12">
+                            <p style="color: rgba(0, 0, 0, 0.54);">Created date</p>
+                            <input type="date" class="w-100 border-0 border-bottom border-3 " style="outline:none">
+
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row ">
-                <div class="col-6">
-                    <p class="mt-3 "> Product</p>
+                <div class="col-lg-6 col-sm-12">
+                    <p class="mt-3 " style="color: #E42C00;"> Product</p>
                     <input type="text" class="border-0 border-bottom  w-100 border-3 border-danger w-100" placeholder="Search or create product" style="outline: none;">
                 </div>
                 <div class="col-6"></div>
             </div>
 
             <div class="row ">
-                <div class="col-6 p_fs">
+                <div class="col-lg-6 col-sm-12 p_fs">
                     <div class="row">
-                        <div class="col-4">
-                            <p class="mt-3">Planned quantity</p>
+                        <div class="col-lg-4 col-12">
+                            <p class="mt-3" style="color: rgba(0, 0, 0, 0.54);">Planned quantity</p>
                             <input type="text" class="border-0 border-bottom  w-100 border-3  w-100" placeholder="" style="outline: none;">
                         </div>
-                        <div class="col-4">
-                            <p class="mt-3">
+                        <div class="col-lg-4 col-sm-12">
+                            <p class="mt-3" style="color: rgba(0, 0, 0, 0.54);">
                                 Actual quantity
                             </p>
                             <input type="text" class="border-0 border-bottom  w-100 border-3  w-100" placeholder="" style="outline: none;">
 
                         </div>
-                        <div class="col-4 ">
-                            <p class="m-1 mt-3">Total Cost
+                        <div class="col-lg-4 col-sm-12">
+                            <p class="m-1 mt-3" style="color: rgba(0, 0, 0, 0.54);">Total Cost
                             </p>
-                            <p class="ps-1">0 USD</p>
+                            <p class="ps-1" style="color: rgba(0, 0, 0, 0.54); font-size: 15px;">0 USD</p>
                         </div>
                     </div>
 
@@ -151,94 +156,92 @@
 
 
             </div>
-            <div class="col-6"></div>
+            <div class="col-lg-6 col-sm-12"></div>
 
 
-            <p class="h6 mt-5">Ingredients</p>
-            <table class="table table-bordered tables">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th>Item</th>
-                        <th>Notes</th>
-                        <th>Planned/actual qty</th>
-                        <th>Cost</th>
-                        <th> availability</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="12">
-                            <p class=" m-0" style="text-align: center;">No Rows To Show</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <h6 class="h6 mt-5" style="color: rgba(0, 0, 0, 0.87); font-size: 1rem;">Ingredients</h6>
+            <div class="table-responsive">
+                <table class="table table-bordered tables">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color:#2C2D31BF ; font-size: 12px;">Item <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td style="color:#2C2D31BF ; font-size: 12px;">Notes <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td style="color:#2C2D31BF; font-size: 12px;">Planned/actual qty <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td style="color:#2C2D31BF; font-size: 12px;">Cost <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td style="color:#2C2D31BF; font-size: 12px;"> availability <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="12">
+                                <p class=" m-0" style="text-align: center ; color: #2C2D31;">No Rows To Show</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <div class=" ">
-                <a href=" " class="text-decoration-none p-4 "><i class="fa-solid fa-plus "></i>Add new row</a>
-            </div>
-
-            <p class="h6 mt-5">Operations</p>
-            <table class="table table-bordered tables ">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th>Item</th>
-                        <th>Notes</th>
-                        <th>Planned/actual qty</th>
-                        <th>Cost</th>
-                        <th> availability</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="12">
-                            <p class=" m-0" style="text-align: center;">No Rows To Show</p>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-            <div class=" ">
-                <a href=" " class="text-decoration-none p-4 "><i class="fa-solid fa-plus "></i>Add new row</a>
-            </div>
-
-
-            <div class="row  mt-4 ">
-                <div class="col bg-secondary mt-5  mx-4">
-                    <p class="">Additional info</p>
+                <div class=" ">
+                    <a href=" " class="text-decoration-none p-4  "><i class="fa-solid fa-plus " style="font-size: 12px;"></i>Add new row</a>
                 </div>
+
+                <p class="h6 mt-5" style="color: rgba(0, 0, 0, 0.87);;">Operations</p>
+                <table class="table table-bordered tables ">
+
+
+
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td style="color:#2C2D31BF ; font-size: 12px;">Item <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td style="color:#2C2D31BF ; font-size: 12px;">Notes <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td style="color:#2C2D31BF; font-size: 12px;">Planned/actual qty <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td style="color:#2C2D31BF; font-size: 12px;">Cost <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td style="color:#2C2D31BF; font-size: 12px;"> availability <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tbody>
+                        <tr>
+                            <td colspan="12">
+                                <p class=" m-0" style="text-align: center; color: #2C2D31;">No Rows To Show</p>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
-            <div class="row">
-                <div class="col mx-4 buton  border border-dark  ">
-                    <a href=""><i class="fa-solid fa-bold p-2"></i></a>
-                    <a href=""><i class="fa-solid fa-italic p-2"></i></a>
-                    <a href=""><i class="fa-solid fa-underline p-2"></i></a>
-                    <a href=""><i class="fa-solid fa-link p-2"></i></a>
-                    <a href=""><i class="fa-solid fa-list-ol p-2"></i></a>
-                    <a href=""><i class="fa-solid fa-list p-2"></i></a>
+            <div class=" ">
+                <a href=" " class="text-decoration-none p-4  "><i class="fa-solid fa-plus " style="font-size: 12px;"></i>Add new row</a>
+            </div>
+
+
+            <div class="mx-3">
+                <div class="row  mt-5  mx-0 " style="background-color: #f4f4f4;">
+                    <div class="col    my-2">
+                        <p class=" m-0" style=" color: rgba(0, 0, 0, 0.54); font-size: 0.75rem">Additional info <sup><i class="fa-solid fa-circle-info"></i></sup></p>
+                    </div>
                 </div>
-            </div>
-            <div class="row mx-0 ">
-                <form action="">
-                    <textarea class="w-100" placeholder="Type comment here"></textarea>
-                </form>
+
+                <div>
+                    <textarea id="editor1" class="ck_editor" style="width: 100%;height:40px" placeholder="Type commet here"></textarea>
+                    </textarea>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
 
 
 
+        <script src="//cdn.ckeditor.com/4.19.1/basic/ckeditor.js"></script>
 
+        <script>
+            CKEDITOR.replace('editor1')
+        </script>
 </body>
 
 </html>

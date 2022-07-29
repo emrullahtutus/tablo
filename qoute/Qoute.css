@@ -1,91 +1,101 @@
-body {
-    background-color: #F2F2F2;
-}
-
-#navbar {
-    overflow-x: auto;
-}
-
-@media (min-width: 992px) {
-    #navbarAddBtn {
-        transform: translate(0, 100%)
+    body {
+        background-color: #F2F2F2;
     }
-}
-
-.dropdown-item i {
-    min-width: 2rem;
-    text-align: center;
-}
-
-.ddItem:focus {
-    background-color: rgba(108, 117, 125, 0.4);
-}
-
-.navbar-nav .nav-link.active,
-#ddHelp.show {
-    color: yellow;
-}
-
-#ddAddBtn,
-#ddDemoBtn {
-    background-color: yellow;
-    color: black;
-}
-
-#ddAddBtn:active,
-#ddDemoBtn:active {
-    background-color: rgb(187, 187, 4);
-}
-
-.nav-tabs .nav-link {
-    transition: 3s;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-btn_1 {
-    border: 2px solid gray;
-    color: rgb(44, 45, 49);
-}
-
-.table {
-    padding: 10rem;
-}
-
-.link a {
-    text-decoration: none;
-    color: rgb(5, 60, 111);
-}
-
-.dropdown-menu a:hover {
-    background-color: rgb(182, 215, 247);
-}
-
-.dropdown-menu a {
-    text-decoration: none;
-    color: black;
-}
-
-.link1_1 {
-    border-bottom: 1px gray solid;
-}
-
-.link {
-    border-bottom: 1px solid gray;
-}
-
-.buton a {
-    color: black;
-    opacity: 0.5;
-}
-
-td input {
-    outline: none;
-}
-
-.tables th {
-    font-size: 14px;
-    background-color: #F2F2F2;
-}
+    
+    #navbar {
+        overflow-x: auto;
+    }
+    
+    @media (min-width: 992px) {
+        #navbarAddBtn {
+            transform: translate(0, 100%)
+        }
+    }
+    
+    .dropdown-item i {
+        min-width: 2rem;
+        text-align: center;
+    }
+    
+    .ddItem:focus {
+        background-color: rgba(108, 117, 125, 0.4);
+    }
+    
+    .navbar-nav .nav-link.active,
+    #ddHelp.show {
+        color: yellow;
+    }
+    
+    #ddAddBtn,
+    #ddDemoBtn {
+        background-color: yellow;
+        color: black;
+    }
+    
+    #ddAddBtn:active,
+    #ddDemoBtn:active {
+        background-color: rgb(187, 187, 4);
+    }
+    
+    .nav-tabs .nav-link {
+        transition: 3s;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    btn_1 {
+        border: 2px solid gray;
+        color: rgb(44, 45, 49);
+    }
+    
+    .table {
+        padding: 10rem;
+    }
+    
+    .link a {
+        text-decoration: none;
+        color: rgb(5, 60, 111);
+    }
+    
+    .dropdown-menu a:hover {
+        background-color: rgb(182, 215, 247);
+    }
+    
+    .dropdown-menu a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .link1_1 {
+        border-bottom: 1px gray solid;
+    }
+    
+    .link {
+        border-bottom: 1px solid gray;
+    }
+    
+    .buton a {
+        color: black;
+        opacity: 0.5;
+    }
+    
+    td input {
+        outline: none;
+    }
+    
+    .Quotes_border {
+        border: none;
+        border-bottom: 2px solid #003E9B;
+    }
+    
+    .row input[type=text]:focus {
+        border-bottom: 2px solid #003E9B !important;
+    }
+    
+    .form-control:focus {
+        border: 1px solid #003E9B !important;
+        border-radius: 0;
+        box-shadow: none;
+    }

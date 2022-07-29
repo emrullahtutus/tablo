@@ -77,24 +77,25 @@
 
 
 </html>
-<div class=" my-2  link ">
-    <a href="" class="pe-3 d-inline-flex ms-5">lorem</a>
-    <a href="">lorem</a>
+<div class=" my-2  link_1 " style="border-bottom: 1px solid #ccc;">
+    <a href="" class="pe-3 d-inline-flex ms-5" style="color:#00327c; text-decoration: none;">Quotes</a>
+    <a href="" style="color:#00327c; border-bottom: 2px solid #00327c; text-decoration: none ;">Sales orders</a>
 </div>
-<div class="container-fluid  px-5 ">
-    <div class="d-flex link1_1">
-        <div class="col-4 d-flex p-1">
 
-            <button type="submit" class="ms-4 border-0 text-muted">open</button>
-            <button type="submit" class="border-0 text-muted">done</button>
+<div class="col-lg col-sm-12  px-5 ">
+    <div class="d-flex link1_1">
+        <div class="col-lg-4 col-sm-12 d-flex p-1">
+
+            <button type="submit" class=" border-0 text-muted ">Open</button>
+            <button type="submit" class="border-0 text-muted ">Done</button>
 
         </div>
-        <div class="col-8 d-flex justify-content-end mb-2">
+        <div class="col-lg-8 col-sm-12 d-flex justify-content-end mb-2">
 
-            <h6 class="d-flex align-items-center mt-1 text-muted">Lorem, ipsum:</h6>
+            <h6 class="d-flex align-items-center mt-1 text-muted">Shipping form:</h6>
             <div class="dropdown ">
-                <button class="btn btn-secondary dropdown-toggle   me-3 " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown
+                <button class="btn  dropdown-toggle   me-3 " type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:#e0e0e0 ;">
+        All locations
       </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li>
@@ -102,370 +103,457 @@
                     </li>
                     <li>
                         <button class="dropdown-item" type="button">
-            Another action
+                            All location
           </button>
                     </li>
                     <li>
                         <button class="dropdown-item" type="button">
-            Something else here
+            Manage location
+          </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button">
+            Another action
           </button>
                     </li>
                 </ul>
             </div>
             <div class="dropdown ">
-                <button class="btn btn-secondary dropdown-toggle   me-5" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown
-      </button>
+                <button class="btn  dropdown-toggle   me-5" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:#e0e0e0 ;">Export</button>
+                </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                     <li>
                         <button class="dropdown-item" type="button"></button>
                     </li>
+                    <p> Export as:</p>
                     <li>
                         <button class="dropdown-item" type="button">
-            Another action
+         .xlsx
           </button>
                     </li>
                     <li>
                         <button class="dropdown-item" type="button">
-            Something else here
+          .csv
           </button>
+                    </li>
+                    <p>Last 48 h exports:</p>
+                    <button class="dropdown-item" type="button">
+                        No files here
+                      </button>
                     </li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="d-flex justify-content-between">
-        <p class="mt-2"> Lorem</p>
+        <p class="mt-2"> <strong>5</strong> orders</p>
         <div class="dropdown">
-            <button class="btn btn-sm dropdown-toggle me-3 my-2 border-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown 
+            <button class="btn btn-sm dropdown" disabled type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="   border: none ; background-color: none;">
+                 <span style="color: rgb(0, 0, 0); "> Bulk actions </span> 
                 </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Action</a></li>
+
+                </a>
+                </li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
         </div>
     </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-sm ">
 
+            <thead>
+                <tr class="border ">
+                    <td class="   p-0" style="font-size: 13px; color: #2C2D31BF;">Rank <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                    <td class="p-0"><i class="fa-solid fa-circle-info" style="font-size: 10px;"></i>
+                        <td class=" p-0" style="font-size: 13px; color: #2C2D31BF;">Order# <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0" style="font-size: 13px; color: #2C2D31BF;">Customer<sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0" style="font-size: 13px; color: #2C2D31BF;">Total amount<sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0" style="font-size: 13px; color: #2C2D31BF;">Delivery deadline <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0" style="font-size: 13px; color: #2C2D31BF;">Sales items <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0" style="font-size: 13px; color: #2C2D31BF;">Ingredients <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0" style="font-size: 13px; color: #2C2D31BF;">Production <sup><i class="fa-solid fa-circle-info"></i></sup></td>
+                        <td class="p-0" style="font-size: 13px; color: #2C2D31BF;">Delivery <sup><i class="fa-solid fa-circle-info"></i></sup></td>
 
-    <table class="table table-bordered table-sm ">
+                </tr>
 
-        <thead>
-            <tr class="border ">
-                <th class=" text-muted  p-0">Rank</th>
-                <th class="p-0"></th>
-                <th class=" p-0"></th>
-                <th class="p-0"></th>
-                <th class="p-0"></th>
-                <th class="p-0"></th>
-                <th class="p-0"></th>
-                <th class="p-0"></th>
-                <th class="p-0"></th>
-                <th class="p-0"></th>
+            </thead>
 
-            </tr>
+            <tbody>
+                <tr class="border input1">
+                    <td class=" p-0 "></td>
+                    <td class="p-0 "></td>
+                    <td class=" p-0 "><input type="text" class="mb-2"></td>
+                    <td class=" p-0"><input type="text" class="mb-2"></td>
+                    <td class=" p-0"></td>
+                    <td class=" text-center p-0">
 
-        </thead>
+                        <div class=" d-flex border-0 ">
+                            <p class=" p-0 me-auto " style="font-size: small ;">Tarih</p>
+                            <a href="" class="   dropdown rounded-0 border-0" data-bs-toggle="dropdown" aria-expanded="false "><i class="fa-solid fa-calendar-day " style="color: black; font-size: small;"></i></a>
+                            </button>
+                            <ul class="dropdown-menu p-3">
+                                <!-- Dropdown menu links -->
+                                <li><a class="dropdown-item " href="#">All dates</a></li>
+                                <li><a class="dropdown-item" href="#">Last 7 days</a></li>
+                                <li><a class="dropdown-item" href="#">Current month</a></li>
+                                <li><a class="dropdown-item" href="#">Last month</a></li>
+                                <li><a class="dropdown-item" href="#">Custom date range</a></li>
+                            </ul>
 
-        <tbody>
-            <tr class="border input1">
-                <td class=" p-0 "></td>
-                <td class="p-0 "></td>
-                <td class=" p-0 "><input type="text" class="mb-2"></td>
-                <td class=" p-0"><input type="text" class="mb-2"></td>
-                <td class=" p-0"></td>
-                <td class=" text-center p-0">
+                    </td>
+                    <td class="p-0  "><input type="text " class="mb-2"></td>
+                    <td class=" p-0 "><input type="text" class="mb-2"></td>
+                    <td class=" p-0 "><input type="text" class="mb-2"></td>
+                    <td class=" p-0 "><input type="text" class="mb-2"></td>
+                </tr>
+                <tr class="border ">
+                    <td colspan=12 class="col p-0  ">S</td>
 
-                    <div class="btn-group  border-0 ">
-                        <h6 class="d-block mt-3">Tarih</h6>
-                        <a href="" class=" btn  dropdown rounded-0 mt-2" data-bs-toggle="dropdown" aria-expanded="false "><i class="fa-solid fa-calendar-day "></i></a>
-                        </button>
-                        <ul class="dropdown-menu p-3">
-                            <!-- Dropdown menu links -->
-                            <li><a class="dropdown-item " href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                        <br><br>
-                        <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);">
-
-                            <a class="dropdown-item ddItem text-secondary py-2" href="#"><i
-                                class="fa-solid fa-plus"></i>
-                            Quote</a>
-
-
-
-                            <div class="btn-group dropend  rounded-0">
-                                <a href="" class="btn btn-secondary dropdown-toggle rounded-0" data-bs-toggle="dropdown" aria-expanded="false"> </a>
-                                <ul class="dropdown-menu p-3">
-                                    <!-- Dropdown menu links -->
-                                    <li><a class="dropdown-item " href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-
-
-                                </ul>
-
-                </td>
-                <td class="p-0  "><input type="text " class="mb-2"></td>
-                <td class=" p-0 "><input type="text" class="mb-2"></td>
-                <td class=" p-0 "><input type="text" class="mb-2"></td>
-                <td class=" p-0 "><input type="text" class="mb-2"></td>
-            </tr>
-            <tr class="border ">
-                <td colspan=12 class="col p-0  ">S</td>
-
-            </tr>
-            <tr>
-                <td class="p-0">
-                    <div>
-                        <i class="fa-solid fa-grip-vertical mt-3"></i>
-                    </div>
-                </td>
-                <td class="p-0"><input class="mt-3" type="checkbox" name="" id="" /></td>
-                <td class="p-0"></td>
-                <td class="p-0"></td>
-                <td class="text-center align-middle p-0">Lorem, ipsum </td>
-                <td class=" text-center align-middle p-0 ">
-
-                    22-07-08
-
-                </td>
-                <td class="p-0">
-                    <a href="" class="btn btn-success w-100 rounded-0">Lorem</a>
-                </td>
-                <td class="p-0">
-                    <a href="" class="btn btn-warning w-100 border-bottom rounded-0 ">Lorem</a>
-                </td>
-                <td class="p-0">
-                    <div class="btn-group dropend w-100 rounded-0">
-                        <button type="button" class="btn btn-secondary dropdown-toggle rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropend
-              </button>
-                        <ul class="dropdown-menu p-3">
-                            <!-- Dropdown menu links -->
-                            <li>
-                                <a class="dropdown-item " href="#"></a>
-                            </li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-
-
-                        </ul>
-                    </div>
-                </td>
-                <td class="p-0">
-                    <div class="dropdown ">
-                        <button class="btn btn-secondary dropdown-toggle w-100 rounded-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                            <li>
-                                <button class="dropdown-item" type="button"></button>
-                            </li>
-                            <li>
-                                <button class="dropdown-item" type="button">
-                    Another action
-                  </button>
-                            </li>
-                            <li>
-                                <button class="dropdown-item" type="button">
-                    Something else here
-                  </button>
-                            </li>
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="p-0">
-                    <div>
-                        <i class="fa-solid fa-grip-vertical mt-3"></i>
-                    </div>
-
-                </td>
-                <td class="p-0"><input class="mt-3" type="checkbox" name="" id="" /></td>
-                <td class="p-0"></td>
-                <td class="p-0"></td>
-                <td class="text-center align-middle ">Lorem, ipsum.
-                </td>
-                <td class=" text-center align-middle p-0 ">
-
-                    22-07-08
-
-                </td>
-
-                <td class="p-0">
-                    <a href="" class="btn btn-success w-100 rounded-0">Lorem</a>
-                </td>
-                <td class="p-0">
-                    <a href="" class="btn btn-danger w-100 rounded-0">Lorem</a>
-                </td>
-                <td class="p-0 ">
-                    <div class="btn-group dropend w-100 ">
-                        <button type="button" class="btn btn-secondary dropdown-toggle rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropend
-                    </button>
-                        <ul class="dropdown-menu">
-                            <!-- Dropdown menu links -->
-                            <li><a class="dropdown-item " href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-                        </ul>
-                    </div>
-                    </th>
+                </tr>
+                <tr>
                     <td class="p-0">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle w-100 rounded-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                        <div>
+
+                            <i class="fa-solid fa-grip-vertical ms-1 me-2 mt-3" style="color:  #7F848A;;"></i>
+                            <span style="color:  #7F848A;;">1</span>
+                        </div>
+                    </td>
+                    <td class="p-0"><input class="mt-3" type="checkbox" name="" id="" /></td>
+                    <td class="p-0 "><a href="" class="ps-3">SO-2[DEMO]</a></td>
+                    <td class="p-0">
+                        <p class="m-0 ms-3 mt-2 ps-1 p-0">Rob Decor [DEMO]</p>
+                    </td>
+                    <td class="  p-0">
+
+                        <p class="p-0  m-0 " style="text-align: end;">4176.00</p>
+                    </td>
+                    <td class=" text-center align-middle p-0 ">
+
+                        22-07-08
+
+                    </td>
+                    <td class="p-0">
+                        <a href="" class="btn btn-success w-100 rounded-0">Lorem</a>
+                    </td>
+                    <td class="p-0">
+                        <a href="" class="btn btn-warning w-100 border-bottom rounded-0 ">Lorem</a>
+                    </td>
+                    <td class="p-0">
+                        <div class="btn-group dropend w-100 rounded-0">
+                            <button type="button" class="btn btn-secondary dropdown-toggle rounded-0" style="    background-color: rgb(213, 213, 213);" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span style="color: rgb(0, 0, 0); ">Not started </span> 
               </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <ul class="dropdown-menu p-3">
+                                <!-- Dropdown menu links -->
                                 <li>
-                                    <button class="dropdown-item" type="button">Action</button>
-                                </li>
-                                <li>
-                                    <button class="dropdown-item" type="button">
-                    Another action
-                  </button>
-                                </li>
-                                <li>
-                                    <button class="dropdown-item" type="button">
-                    Something else here
-                  </button>
-                                </li>
+                                    <a class="dropdown-item" href="#" style="width:auto ;"> <span style="font-size: 14px; color: #000000DE;"> SO-2 [DEMO]/2 [TS-BRZ] Television stand[DEMO]/b </span>
+                                        <p style="color: #0000008A;">1 pcs-by 2022-07-20</p>
+
+
                             </ul>
                         </div>
                     </td>
-            </tr>
-            <tr>
-                <td class="p-0">
-                    <div>
-                        <i class="fa-solid fa-grip-vertical mt-3"></i>
-                    </div>
-                </td>
-                <td class="p-0"><input class="mt-3" type="checkbox" name="" id="" /></td>
-                <td class="p-0"></td>
-                <td class="p-0"></td>
-                <td class="text-center align-middle p-0">Lorem, ipsum.</td>
-                <td class=" text-center align-middle  p-0">
-
-                    22-07-08
-
-                </td>
-                <td class="p-0">
-                    <a href="" class="btn btn-danger w-100 rounded-0">Lorem</a>
-                </td>
-                <td class="p-0">
-                    <a href="" class="btn btn-warning w-100 rounded-0">Lorem</a>
-                </td>
-                <td class="p-0">
-                    <div class="btn-group dropend w-100 ">
-                        <button type="button" class="btn btn-secondary dropdown-toggle rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
-              
-              
-                      Dropend
-                    </button>
-                        <ul class="dropdown-menu">
-                            <!-- Dropdown menu links -->
-                            <li><a class="dropdown-item " href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-                        </ul>
-                    </div>
-                    </th>
-                    <td class="p-0">
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle w-100 rounded-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </button>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <li>
-                                    <button class="dropdown-item" type="button"></button>
-                                </li>
-                                <li>
-                                    <button class="dropdown-item" type="button">
-                    Another action
-                  </button>
-                                </li>
-                                <li>
-                                    <button class="dropdown-item" type="button">
-                    Something else here
-                  </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </td>
-            </tr>
-            <tr>
-                <td class="p-0">
-                    <div>
-                        <i class="fa-solid fa-grip-vertical mt-3"></i>
-                    </div>
-                </td>
-                <td class="p-0"><input class="mt-3" type="checkbox" name="" id="" /></td>
-                <td class="p-0"></td>
-                <td class="p-0"></td>
-                <td class="text-center align-middle p-0 ">Lorem, ipsum.</td>
-                <td class=" text-center align-middle p-0 ">
-
-                    22-07-08
-
-                </td>
-                <td class=" p-0">
-                    <a href="" class="btn btn-danger w-100 rounded-0 ">Lorem</a>
-                </td>
-                <td class="p-0">
-                    <a href="" class="btn btn-warning w-100 border-bottom rounded-0 ">Lorem</a>
-                </td>
-                <td class="p-0">
-                    <div class="btn-group dropend w-100 rounded-0">
-                        <button type="button" class="btn btn-secondary dropdown-toggle rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropend
-              </button>
-                        <ul class="dropdown-menu p-3">
-                            <!-- Dropdown menu links -->
-                            <li><a class="dropdown-item " href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-
-                        </ul>
-                    </div>
-                    </th>
                     <td class="p-0">
                         <div class="dropdown ">
-                            <button class="btn btn-secondary dropdown-toggle w-100 rounded-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                            <button class="btn  dropdown-toggle w-100 rounded-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #D5D5D5;">
+                Not shipped
               </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                 <li>
                                     <button class="dropdown-item" type="button"></button>
                                 </li>
+                                <p style="color:  #2C2D31; font-size: 0.8125rem;" class="ps-3">Quote status</p>
                                 <li>
                                     <button class="dropdown-item" type="button">
-                    Another action
+                                    <i class="fa-solid fa-square" style="color:rgb(213, 213, 213);  padding: 6px 16px;"></i><span class="mb-3"> Pending</span>
+                  </button>
+                                </li>
+                                </li>
+                                <p style="color:  #2C2D31; font-size: 0.8125rem; padding-left: 16px;
+                        padding-right: 16px; font-weight: 600;" class="ps-3"> Delivery status</p>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                    <i class="fa-solid fa-square" style="    color: rgb(255, 223, 108);  padding: 6px 16px;"></i> <span >  Pack some...</span>
                   </button>
                                 </li>
                                 <li>
                                     <button class="dropdown-item" type="button">
-                    Something else here
+                                    <i class="fa-solid fa-square" style="    color: rgb(255, 223, 108);  padding: 6px 16px;"></i> <span> Pack all</span>
+                  </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                    <i class="fa-solid fa-square" style="    color: rgb(52, 133, 88);  padding: 6px 16px;"></i>  <span>Deliver some</span> 
+                  </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                    <i class="fa-solid fa-square" style="    color: rgb(52, 133, 88); padding: 6px 16px;" ></i>   <span>Deliver all</span>
                   </button>
                                 </li>
                             </ul>
                         </div>
                     </td>
-            </tr>
-        </tbody>
-    </table>
+                </tr>
+                <tr>
+                    <td class="p-0">
+                        <div>
+
+                            <i class="fa-solid fa-grip-vertical ms-1 me-2 mt-3" style="color:  #7F848A;;"></i>
+                            <span style="color:  #7F848A;;">1</span>
+                        </div>
+
+                    </td>
+                    <td class="p-0"><input class="mt-3" type="checkbox" name="" id="" /></td>
+                    <td class="p-0"><a href="" class="ps-3">SO-3[DEMO]</a></td>
+                    <td class="p-0">
+                        <p class="ms-3 mt-2 p-0 m-0">Jack Carpets [DEMO]</p>
+                    </td>
+                    <td class=" ">
+                        <p class="p-0 m-0 " style="text-align: end;">4176.00</p>
+                    </td>
+                    <td class=" text-center align-middle p-0 ">
+
+                        22-07-08
+
+                    </td>
+
+                    <td class="p-0">
+                        <a href="" class="btn btn-success w-100 rounded-0">Lorem</a>
+                    </td>
+                    <td class="p-0">
+                        <a href="" class="btn btn-danger w-100 rounded-0">Lorem</a>
+                    </td>
+                    <td class="p-0 ">
+                        <div class="btn-group dropend w-100 rounded-0">
+                            <button type="button" class="btn  dropdown-toggle rounded-0 w-100" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: rgb(228, 44, 0);">
+                <span style="color:  rgb(255, 255, 255);;">Blocked</span> 
+              </button>
+                            <ul class="dropdown-menu p-3">
+                                <!-- Dropdown menu links -->
+                                <a class="dropdown-item" href="#" style="width: auto;"> <span style="font-size: 14px; color: #000000DE;"> SO-2 [DEMO]/2 [TS-BRZ] Television stand[DEMO]/b </span>
+                                    <p style="color: #0000008A;">1 pcs-by 2022-07-20</p>
+
+
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="p-0">
+                        <div class="dropdown ">
+                            <button class="btn  dropdown-toggle w-100 rounded-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #D5D5D5;">
+                            Not shipped
+                  </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <li>
+                                    <button class="dropdown-item" type="button"></button>
+                                </li>
+                                <p style="color:  #2C2D31; font-size: 0.8125rem;" class="ps-3">Quote status</p>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="color:rgb(213, 213, 213);  padding: 6px 16px;"></i><span class="mb-3"> Pending</span>
+                      </button>
+                                </li>
+                                </li>
+                                <p style="color:  #2C2D31; font-size: 0.8125rem; padding-left: 16px;
+                            padding-right: 16px; font-weight: 600;" class="ps-3"> Delivery status</p>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(255, 223, 108);  padding: 6px 16px;"></i> <span >  Pack some...</span>
+                      </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(255, 223, 108);  padding: 6px 16px;"></i> <span> Pack all</span>
+                      </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(52, 133, 88);  padding: 6px 16px;"></i>  <span>Deliver some</span> 
+                      </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(52, 133, 88); padding: 6px 16px;" ></i>   <span>Deliver all</span>
+                      </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="p-0">
+                        <div>
+                            <i class="fa-solid fa-grip-vertical ms-1 me-2 mt-3" style="color:  #7F848A;;"></i>
+                            <span style="color:  #7F848A;;">1</span>
+                        </div>
+                    </td>
+                    <td class="p-0"><input class="mt-3" type="checkbox" name="" id="" /></td>
+                    <td class="p-0"><a href="" class="ps-3">SO-4[DEMO]</a></td>
+                    <td class="p-0">
+                        <p class="ms-3 mt-2 p-0 m-0">Jack Carpets [DEMO]</p>
+                    </td>
+                    <td class="  p-0">
+                        <p class="p-0  m-0" style="text-align: end;">4176.00</p>
+                    </td>
+                    <td class=" text-center align-middle  p-0">
+
+                        22-07-08
+
+                    </td>
+                    <td class="p-0">
+                        <a href="" class="btn btn-danger w-100 rounded-0">Lorem</a>
+                    </td>
+                    <td class="p-0">
+                        <a href="" class="btn btn-warning w-100 rounded-0">Lorem</a>
+                    </td>
+                    <td class="p-0">
+                        <div class="btn-group dropend w-100 rounded-0">
+                            <button type="button" class="btn btn-secondary dropdown-toggle rounded-0" style="    background-color: rgb(213, 213, 213);" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span style="color: rgb(0, 0, 0); " >Not started </span> 
+              </button>
+                            <ul class="dropdown-menu p-3">
+                                <!-- Dropdown menu links -->
+                                <li>
+                                    <a class="dropdown-item" href="#" style="width: auto;"> <span style="font-size: 14px; color: #000000DE;"> SO-2 [DEMO]/2 [TS-BRZ] Television stand[DEMO]/b </span>
+                                        <p style="color: #0000008A;">1 pcs-by 2022-07-20</p>
+
+
+                            </ul>
+                        </div>
+                        </th>
+                        <td class="p-0">
+                            <div class="dropdown ">
+                                <button class="btn  dropdown-toggle w-100 rounded-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #D5D5D5;">
+                                Not shipped
+                  </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li>
+                                        <button class="dropdown-item" type="button"></button>
+                                    </li>
+                                    <p style="color:  #2C2D31; font-size: 0.8125rem;" class="ps-3">Quote status</p>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="color:rgb(213, 213, 213);  padding: 6px 16px;"></i><span class="mb-3"> Pending</span>
+                      </button>
+                                    </li>
+                                    </li>
+                                    <p style="color:  #2C2D31; font-size: 0.8125rem; padding-left: 16px;
+                            padding-right: 16px; font-weight: 600;" class="ps-3"> Delivery status</p>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(255, 223, 108);  padding: 6px 16px;"></i> <span >  Pack some...</span>
+                      </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(255, 223, 108);  padding: 6px 16px;"></i> <span> Pack all</span>
+                      </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(52, 133, 88);  padding: 6px 16px;"></i>  <span>Deliver some</span> 
+                      </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(52, 133, 88); padding: 6px 16px;" ></i>   <span>Deliver all</span>
+                      </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                </tr>
+                <tr>
+                    <td class="p-0">
+                        <div>
+                            <i class="fa-solid fa-grip-vertical ms-1 me-2 mt-3" style="color:  #7F848A;;"></i>
+                            <span style="color:  #7F848A;;">1</span>
+                        </div>
+                    </td>
+                    <td class="p-0"><input class="mt-3" type="checkbox" name="" id="" /></td>
+                    <td class="p-0"><a href="" class="ps-3">SO-5[DEMO]</a></td>
+                    <td class="p-0">
+                        <p class="ms-3 mt-2 p-0">John Tabletop [DEMO]</p>
+                    </td>
+                    <td class=" ">
+                        <p class="p-0" style="text-align: end" ;>2352.00</p>
+                    </td>
+                    <td class=" text-center align-middle p-0 ">
+
+                        22-07-08
+
+                    </td>
+                    <td class=" p-0">
+                        <a href="" class="btn btn-danger w-100 rounded-0 ">Lorem</a>
+                    </td>
+                    <td class="p-0">
+                        <a href="" class="btn btn-warning w-100 border-bottom rounded-0 ">Lorem</a>
+                    </td>
+                    <td class="p-0">
+                        <div class="btn-group dropend w-100 rounded-0">
+                            <button type="button" class="btn btn-secondary dropdown-toggle rounded-0" data-bs-toggle="dropdown" aria-expanded="false" style="    background-color: rgb(213, 213, 213);">
+                            <span style="color: rgb(0, 0, 0); ">Not started </span> 
+              </button>
+                            <ul class="dropdown-menu p-3">
+                                <!-- Dropdown menu links -->
+                                <a class="dropdown-item" href="#" style="width: auto;"> <span style="font-size: 14px; color: #000000DE;"> SO-2 [DEMO]/2 [TS-BRZ] Television stand[DEMO]/b </span>
+                                    <p style="color: #0000008A;">1 pcs-by 2022-07-20</p>
+
+
+                            </ul>
+                        </div>
+                        </th>
+                        <td class="p-0">
+                            <div class="dropdown ">
+                                <button class="btn  dropdown-toggle w-100 rounded-0" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #D5D5D5;">
+                                Not shipped
+                  </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <li>
+                                        <button class="dropdown-item" type="button"></button>
+                                    </li>
+                                    <p style="color:  #2C2D31; font-size: 0.8125rem;" class="ps-3">Quote status</p>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="color:rgb(213, 213, 213);  padding: 6px 16px;"></i><span class="mb-3"> Pending</span>
+                      </button>
+                                    </li>
+                                    </li>
+                                    <p style="color:  #2C2D31; font-size: 0.8125rem; padding-left: 16px;
+                            padding-right: 16px; font-weight: 600;" class="ps-3"> Delivery status</p>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(255, 223, 108);  padding: 6px 16px;"></i> <span >  Pack some...</span>
+                      </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(255, 223, 108);  padding: 6px 16px;"></i> <span> Pack all</span>
+                      </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(52, 133, 88);  padding: 6px 16px;"></i>  <span>Deliver some</span> 
+                      </button>
+                                    </li>
+                                    <li>
+                                        <button class="dropdown-item" type="button">
+                                        <i class="fa-solid fa-square" style="    color: rgb(52, 133, 88); padding: 6px 16px;" ></i>   <span>Deliver all</span>
+                      </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
     </div>
     <script type="module" src="/src/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    </div>
-    </body>
+</div>
+</body>
 
-    </html>
+</html>

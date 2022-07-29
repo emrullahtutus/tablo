@@ -68,19 +68,10 @@ btn_1 {
     color: black;
 }
 
-.link a:hover {
-    text-decoration: none;
-    color: rgb(147, 175, 201);
+.fa-solid fa-calendar-day {
+    font-size: small;
 }
 
 .link1_1 {
-    border-bottom: 7px rgb(1, 1, 112) solid;
-}
-
-.link {
-    border-bottom: 1px solid gray;
-}
-
-.fa-solid fa-calendar-day {
-    font-size: small;
+    border-bottom: 6px solid rgb(0, 62, 155);
 }

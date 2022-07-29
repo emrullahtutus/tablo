@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="settings_Data import\Data_import.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark" style="z-index: 99;">
+            <div class="container-fluid justify-content-start"><a href="/" class="router-link-active router-link-exact-active navbar-brand font-monospace p-2 px-4" aria-current="page">Katana</a><button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0" id="navbar">
+                    <div class="navbar-nav"><a href="/sales" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-shop"></i> SELL </a><a href="/manufacturingorders" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-thumbs-up"></i> MAKE </a><a href="/purchases" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-basket-shopping"></i> BUY </a><a href="/inventory" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-cube"></i> STOCK </a><a href="/products" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-star"></i> ITEMS </a><a href="/contacts" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-user-group"></i> CONTACTS </a><a href="/settings" class="nav-link d-flex flex-column align-items-center p-2 px-4"><i
+                                        class="fa-solid fa-gear"></i> SETTINGS </a></div>
+                </div>
+                <div id="navbarAddBtn" class="dropdown ms-lg-0 ms-sm-auto"><button class="btn border-0 rounded-circle shadow" id="ddAddBtn" type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-plus"></i></button>
+                    <div class="dropdown-menu" aria-labelledby="ddHelp" style="transform:translate(-40%, 0);"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Quote</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Sales order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Manufacturing order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Purchase order</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    Stock adjustment</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> New product card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-plus"></i>
+                                    New material card</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-plus"></i> Customer</a></div>
+                </div>
+                <div class="text-white ms-auto me-2 dropdown flex-shrink-0"><a class="nav-link" id="ddHelp" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#"><i
+                                    class="fa-solid fa-circle-question fa-2x"></i></a>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddHelp"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-graduation-cap"></i> Knowledge base</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i class="fa-solid fa-star"></i>
+                                    What's new</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-code"></i> Developer portal</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-user-group"></i> Partner directory</a><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-message"></i> Chat with us</a></div>
+                </div>
+                <div class="me-2 flex-shrink-0 p-2 text-decoration-none"><a id="ddDemoBtn" class="btn_1 border-0 shadow-none text-decoration-none rounded-2 px-4 py-1 " aria-current="page" href="#"><i class="fa-solid fa-trash"></i> Demo Data </a></div>
+                <div class="text-white dropdown flex-shrink-0">
+                    <div class="text-white dropdown flex-shrink-0">
+                        <div class="nav-link d-inline-flex align-items-center" id="ddAccount" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+                            <div class="d-flex flex-column align-items-end me-3"><span class="fw-bold">Test
+                                        Company</span><span>Test Test</span></div><i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="ddAccount"><a href="/account" class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-city"></i>
+                                    Account</a><a href="/team" class="dropdown-item ddItem text-secondary py-2"><i
+                                        class="fa-solid fa-user-group"></i> Team</a><a href="#" class="dropdown-item ddItem text-secondary py-2"><i class="fa-solid fa-book-bookmark"></i>
+                                    Subscription</a>
+                            <hr class="dropdown-divider"><a class="dropdown-item ddItem text-secondary py-2" href="#"><i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+        </div>
+        <div class="container-sm  ">
+
+
+            <div class="card  mt-4">
+                <div class="row ">
+
+                    <div class="col-lg-3 col-sm-12 px-0 " style="background-color: #f3f3f3;">
+                        <div id="settingsList" class=" py-3 px-4">
+                            <div class="list-group"><a href="/settings/general" class="list-group-item border-0 d-flex align-items-center justify-content-between  rounded-0" style="background-color: #f3f3f3;"> General <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/uoms" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Units of measure <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a aria-current="page" href="/settings/taxrates" class="router-link-active router-link-exact-active list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Tax rates <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/categories" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Categories <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/operations" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Operations <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/resources" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Resources <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/locations" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Locations <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/printTemplates" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Print templates <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/integrations" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Integrations <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/api" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> API <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/import" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Data import <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/clearData" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Clear data <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/shopFloor" class="list-group-item border-0 d-flex align-items-center justify-content-between " style="background-color: #f3f3f3;"> Shop floor app <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                                <a href="/settings/barcodes" class="list-group-item border-0 d-flex align-items-center justify-content-between  rounded-0" style="background-color: #f3f3f3;"> Barcodes <i class="fa-solid fa-angle-right float-end bg-transparent"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9 col-sm-12">
+                        <div class="row p-4">
+                            <p style="font-size: 16px ; color:#2C2D31; font-weight: 700;">Import data</p>
+                            <p style="font-size: 14px ; font-weight: 400;">Here you can import your data into Katana using our templates. You can also update existing data in bulk using spreadsheets.</p>
+                        </div>
+                        <hr>
+
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; "> Add new products</p>
+                                <p style="font-size: .875rem ; font-weight: 400;"> You can import new products with initial stock amounts using our import template. Download and fill in the template and upload it back to Katana </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12 " style="text-align: center;">
+
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3">  <i class="fa fa-download" style="color:#3365AF; font-size: small;"></i> Download template</button>
+
+                                <button style=" border: none; background: none; color: #3365AF; "> <i class="fa fa-upload" style="color:#3365AF; font-size: small;"></i> Upload data</button>
+
+                            </div>
+                            <hr>
+                        </div>
+
+
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; ">
+                                    Add new materials</p>
+                                <p style="font-size: .875rem ; font-weight: 400;">You can import new materials with initial stock amounts using our import template. Download and fill in the template and upload it back to Katana. </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12" style="text-align: center;">
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3">  <i class="fa fa-download" style="color:#3365AF; font-size: small;"></i> Download template</button>
+
+                                <button style=" border: none; background: none; color: #3365AF; "> <i class="fa fa-upload" style="color:#3365AF; font-size: small;"></i> Upload data</button>
+                            </div>
+                            <hr>
+                        </div>
+
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; "> Add new product recipes / BOMs</p>
+                                <p style="font-size: .875rem ; font-weight: 400;">You can import recipes / BOMs to existing products in Katana using our import template. Download and fill in the template and upload it back to Katana to add new ingredients to products in Katana. </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12-" style="text-align: center;">
+
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3">  <i class="fa fa-download" style="color:#3365AF; font-size: small;"></i> Download template</button>
+
+                                <button style=" border: none; background: none; color: #3365AF; "> <i class="fa fa-upload" style="color:#3365AF; font-size: small;"></i> Upload data</button>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; "> Add new product operations</p>
+                                <p style="font-size: .875rem ; font-weight: 400;"> You can import product operations to existing products in Katana using our import template. Download and fill in the template and upload it back to Katana to add new operations to products in Katana. </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12" style="text-align: center;">
+
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3">  <i class="fa fa-download" style="color:#3365AF; font-size: small;"></i> Download template</button>
+
+                                <button style=" border: none; background: none; color: #3365AF; "> <i class="fa fa-upload" style="color:#3365AF; font-size: small;"></i> Upload data</button>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; ">Add new batch / lot numbers</p>
+                                <p style="font-size: .875rem ; font-weight: 400;">For adding batch numbers and their initial stock quantities for existing products and materials you get your own data as a template. Edit the data in the template and upload it back into Katana. </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12" style="text-align: center;">
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3">  <i class="fa fa-download" style="color:#3365AF; font-size: small;"></i> Download template</button>
+
+                                <button style=" border: none; background: none; color: #3365AF; "> <i class="fa fa-upload" style="color:#3365AF; font-size: small;"></i> Upload data</button>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; "> Add new sales orders</p>
+                                <p style="font-size: .875rem ; font-weight: 400;"> You can import sales orders from Google Sheets via Zapier. Once you have connected your Katana account and spreadsheet in Zapier, every new row added to a Google Sheets spreadsheet will be imported as a sales order in Katana.
+                                </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12" style="text-align: center;">
+
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #3365AF;"></i> Go to setup</button>
+
+
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; "> Add new customers</p>
+                                <p style="font-size: .875rem ; font-weight: 400;"> You can import customers from Google Sheets via Zapier. Once you have connected your Katana account and spreadsheet in Zapier, every new row added to a Google Sheets spreadsheet will be imported as a customer in Katana.
+                                </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12" style="text-align: center;">
+
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3"> <i class="fa-solid fa-arrow-up-right-from-square" style="color: #3365AF;"></i> Go to setup</button>
+
+
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; "> Update existing products and reorder points</p>
+                                <p style="font-size: .875rem ; font-weight: 400;">For updating existing products and reorder points you get your own data as a template. Edit the data in the template and then upload it back into Katana. </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12" style="text-align: center;">
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3">  <i class="fa fa-download" style="color:#3365AF; font-size: small;"></i> Download template</button>
+
+                                <button style=" border: none; background: none; color: #3365AF; "> <i class="fa fa-upload" style="color:#3365AF; font-size: small;"></i> Upload data</button>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; "> Update existing materials and reorder points</p>
+                                <p style="font-size: .875rem ; font-weight: 400;"> For updating existing materials and reorder points you get your own data as a template. Edit the data in the template and then upload it back into Katana. </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12" style="text-align: center;">
+
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3">  <i class="fa fa-download" style="color:#3365AF; font-size: small;"></i> Download template</button>
+
+                                <button style=" border: none; background: none; color: #3365AF; "> <i class="fa fa-upload" style="color:#3365AF; font-size: small;"></i> Upload data</button>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row p-4">
+                            <div class="col-lg-7 col-sm-12 ">
+                                <p style="font-size: 16px; color:#2C2D31; font-weight: 700; ">Update stock levels and stock values</p>
+                                <p style="font-size: .875rem ; font-weight: 400;"> For updating stock levels and values for existing products and materials you get your own data as a template. Edit the data in the template and then upload it back into Katana. Perfect for stocktaking. </p>
+                                <button style="background: none; border: none; color: #3365AF; padding: 0;">Read more</button>
+                            </div>
+                            <div class="col-lg-5 col-sm-12" style="text-align: center;">
+                                <button style="border: none; background: none; color: #3365AF;" class="mt-4 p-3">  <i class="fa fa-download" style="color:#3365AF; font-size: small;"></i> Download template</button>
+
+                                <button style=" border: none; background: none; color: #3365AF; "> <i class="fa fa-upload" style="color:#3365AF; font-size: small;"></i> Upload data</button>
+                            </div>
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-1" style="text-align: center; ">
+                                    <i class="fa-solid fa-circle-info" style="color: #3365AF; ;"></i>
+                                </div>
+                                <div class="col-lg-7 col-sm-12">
+                                    <p>
+                                        Cannot find an import you need? Configure your own using Katana API.</p>
+                                </div>
+                                <div class="col-lg-4 col-sm-12">
+                                    <button style="background: none; border: none; color: #3365AF; padding: 0; " class="ms-auto">Read more</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+            <script type="module " src="/src/main.js "></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+</body>
+
+</html>
